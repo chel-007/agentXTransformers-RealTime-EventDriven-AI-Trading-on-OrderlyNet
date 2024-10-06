@@ -96,7 +96,29 @@ The extra benefits of this event driven implementation with GCP is that everythi
 * the agent places trades from the ***joint decision weighting*** of model's prediction and market sentiment. this is compared against a *threshold* that if met, orders are placed.
 
 
-**Link to the Agent Strategy: [agent-xtransformer Jupyter Notebook](https://github.com/chel-007/agentXTransformers-RealTime-EventDriven-AI-Trading-on-OrderlyNet/blob/main/agent-xtransformer.ipynb)**
+**Link to the Agent Strategy: [agent-xtransformer Jupyter Notebook](https://github.com/chel-007/agentXTransformers-RealTime-EventDriven-AI-Trading-on-OrderlyNet/blob/master/Empyreal%20SDK%20in%20Action%20-%20AIEventDrivenStrategy.ipynb)**
+
+#### **Risk Management Implementations & Performance Tracking:**
+
+<table>
+  <tr>
+    <td>
+      ![drawdown_sharpe](images/drawdown_sharpe.png)  
+      <h4>example risk management - sharpe calc over 10 trades etc.</h4>
+    </td>
+    <td>
+      ![volatility](images/volatility.png)  
+      <h4>market volatility triggers - the yellow highlight shows the movement</h4>
+    </td>
+    <td>
+      ![orderly_backtest](images/orderly_backtest.png)  
+      <h4>final backtest orderly w/ model</h4>
+    </td>
+  </tr>
+</table>
+
+
+
 
 
 <hr>

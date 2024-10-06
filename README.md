@@ -85,7 +85,7 @@ The extra benefits of this event driven implementation with GCP is that everythi
 
 * **Dynamic Positons:** the scoring from MSA is used to create ***dynamic positon size*** (purchase amt) and *stop loss, take profit* prices for risk management.
 
-* **Limit Market Orders** of Stop Loss (SL) & Take Profit (TP) 
+* **Limit Market Orders** of Stop Loss (SL) & Take Profit (TP) using Empyreal SDKs and  ***Orderly Network's REST API***.
 
 * **Monitor Trades**, the agent further *monitor open orders* and closes them when the market moves against by a percentage. This works for both **BUY** and **SELL** limits.
 
@@ -94,6 +94,9 @@ The extra benefits of this event driven implementation with GCP is that everythi
 * **Tracking Volatility**: (*eth can be highly volatile sometimes*), the **agent + model combo** struggles to make successful trade, so it can ***detect this and halt trading*** (only) for the time volatility lasts.
 
 * the agent places trades from the ***joint decision weighting*** of model's prediction and market sentiment. this is compared against a *threshold* that if met, orders are placed.
+
+
+**Link to the Agent Strategy: [agent-xtransformer Jupyter Notebook](https://github.com/chel-007/agentXTransformers-RealTime-EventDriven-AI-Trading-on-OrderlyNet/blob/main/agent-xtransformer.ipynb)**
 
 
 <hr>

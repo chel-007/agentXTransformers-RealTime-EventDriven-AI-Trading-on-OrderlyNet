@@ -13,15 +13,21 @@
 -   It incorporates multiple risk management strategies, including controls for over-trading, metrics calculation, and dynamic position sizing.
 -   The agent trades on the **PERP_ETH_USDC** futures market through the **Orderly Orderbook (Testnet)**.
 
+![agent](images/agent.png)
+
 
 ### *Step 1: LSTM Unsupervised ML Training for Market Prediction*
 
 -   the first step is to train a suitable model. **Long Short-Term Memory (LSTM)** is an ideal machine learning technique for understanding temporal patterns in time series data, (*making it well-suited for financial trading data*).
 -   the model was trained on **3 years of OHLCV data** **w/ 5-minute intervals**. This extensive dataset helps the model capture ***various market trends*** and long-term dependencies for ETH, which are essential for accurate predictions.
 
+![3year_data](images/3year_data.png)
+
 > since the goal is to trade on **Orderly Network's orderbook**, i've used a dataset with similar trading volume patterns to prevent bias and better generalization the real-world.
 
 -   preprocessed the data using techniques (**scaling**, **normalization**), and generated **technical indicators** with different time windows to capture short-and-long term trends.
+
+![tech_indicators](tech_indicators.png)
 
 -   created sequences of 5 time steps for LSTM input, this means the model ***processes 5 consecutive data points*** to predict the next price movement. This allows the model to learn and forecast short-term trends.
 
@@ -30,6 +36,8 @@
 -   Backtested the trained model on the validation set, (data timeline from 2024-06). Additionally, conducted backtesting on Orderly Network's Kline data over a 5-minute interval ***spanning just over 2 days***.
 
 -   calculated several metrics, including **Mean Absolute Error** (MAE), ***R² Score***, and ***Mean Absolute Percentage Error*** (MAPE), to evaluate the model's predictive capabilities beyond just visual analysis.
+
+![metrics](backtest_metrics.png)
 
 <hr>
 

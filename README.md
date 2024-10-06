@@ -21,13 +21,13 @@
 -   the first step is to train a suitable model. **Long Short-Term Memory (LSTM)** is an ideal machine learning technique for understanding temporal patterns in time series data, (*making it well-suited for financial trading data*).
 -   the model was trained on **3 years of OHLCV data** **w/ 5-minute intervals**. This extensive dataset helps the model capture ***various market trends*** and long-term dependencies for ETH, which are essential for accurate predictions.
 
-![3year_data](images/3year_data.png)
+![3year_data](images/3year_data.png) 
 
 > since the goal is to trade on **Orderly Network's orderbook**, i've used a dataset with similar trading volume patterns to prevent bias and better generalization the real-world.
 
 -   preprocessed the data using techniques (**scaling**, **normalization**), and generated **technical indicators** with different time windows to capture short-and-long term trends.
 
-![tech_indicators](tech_indicators.png)
+![tech_indicators](images/tech_indicators.png) 
 
 -   created sequences of 5 time steps for LSTM input, this means the model ***processes 5 consecutive data points*** to predict the next price movement. This allows the model to learn and forecast short-term trends.
 
@@ -37,18 +37,27 @@
 
 -   calculated several metrics, including **Mean Absolute Error** (MAE), ***R² Score***, and ***Mean Absolute Percentage Error*** (MAPE), to evaluate the model's predictive capabilities beyond just visual analysis.
 
-![metrics](backtest_metrics.png)
+![metrics](images/backtest_metrics.png) 
 
 <hr>
 
-### STEP 2: GCP Data Pipeline and Event-Driven Automation
-*i have utilised the following GCP services to create a robust realtime event driven Data<->Prediction pipeline:*
+### Step 2: GCP Data Pipeline and Event-Driven Automation
 
-- **Pub / Sub:** communication across the pipeline from *Data Entry* -> *Preprocessing* -> *Prediction* -> *Upload*
+*I used the following GCP services to build a real-time, event-driven Data-to-Prediction pipeline:*
 
-- **Vertex AI:** deployed the predictive model to GCP Vertex AI for inference through an endpoint that is publicly available
-- **Big Query:** created buckets for streaming orderly kline data into, formatting in the correct schema, before it can be queried for prediction
-- **Cloud Function:** the endpoint connected the streaming data from the local running agent to the cloud Data preprocessing service
+- **Pub/Sub:** enables seamless communication across the pipeline stages: from *Data Entry* to *Preprocessing*, *Prediction*, and *Data Upload*.
+
+-   **Vertex AI:** deployed the predictive model to Vertex AI, making it available through a publicly accessible endpoint for inference.
+
+![vertexai](images/vertexai.png)
+
+-   **BigQuery:** set up buckets to stream Orderly Kline data into, ensuring the data is properly formatted and ready for querying before prediction.
+
+![big_query](images/big_query.png)
+
+-   **Cloud Functions:** connected the streaming data from the locally running agent to the cloud preprocessing service for real-time data handling.
+
+![gcp_functions](images/gcp_functions.png) 
 
 ### Overview of the Data Pipeline Integration W/ GCP
 * the first step is to have a cloud run function that is ready to accept the OHLCV data from the Local running Agent. 

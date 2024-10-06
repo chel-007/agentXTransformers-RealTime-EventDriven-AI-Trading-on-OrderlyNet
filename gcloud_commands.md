@@ -2,7 +2,7 @@
 
 <!-- gcloud pubsub topics publish streamOrderlyKline --message '{"hello": "world"}' -->
 
-gcloud scheduler jobs create http fetch-kline-job --schedule "*/10 * * * *" --time-zone "UTC" --http-method POST --uri https://us-central1-agent-xtransformers.cloudfunctions.net/getOrderlyKline --message-body "{}" --location us-central1
+<!-- gcloud scheduler jobs create http fetch-kline-job --schedule "*/10 * * * *" --time-zone "UTC" --http-method POST --uri https://us-central1-agent-xtransformers.cloudfunctions.net/getOrderlyKline --message-body "{}" --location us-central1
 
 gcloud scheduler jobs create pubsub fetch-kline-job --schedule "*/10 * * * *" --time-zone "UTC" --topic runKlineFunc --message-body "{}" --location us-central1
 
@@ -70,4 +70,4 @@ gcloud functions add-invoker-policy-binding returnPrediction \
 gcloud iam service-accounts create firestore-service-account --display-name "Firestore Service Account"
 
 
-gcloud secrets add-iam-policy-binding firestore-sa-key --member="allUsers" --role="roles/secretmanager.secretAccessor"
+gcloud secrets add-iam-policy-binding firestore-sa-key --member="allUsers" --role="roles/secretmanager.secretAccessor" -->

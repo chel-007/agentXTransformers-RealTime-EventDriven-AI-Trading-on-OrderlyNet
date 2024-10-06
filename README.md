@@ -130,7 +130,11 @@ The extra benefits of this event driven implementation with GCP is that everythi
 
 2. the strategy is best executed in a **jupyter anaconda notebook** due to the nature of the code, it is not recommended to run it in a standalone python script.
 
-3. download **Anacoconda** and install the required dependencies by running `pip install -r requirements.txt`
+3. download **Anacoconda** and run the followquing commands in the Anaconda Prompt:
+    * `conda create --name agentXTransformers python=3.12.4`
+    * `conda activate agentXTransformers`
+
+4. Install the required dependencies by running `pip install -r requirements.txt`. after this, you can run jupyter with `jupyter notebook`. ("if u face an antivirus error, consider deactivating your antivirus")
 
 4. the notebook is divided into 3 parts:
     * `Global Initialization - set up global functions and your Orderly account details`.

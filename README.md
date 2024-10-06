@@ -47,13 +47,15 @@
 
 - **Pub/Sub:** enables seamless communication across the pipeline stages: from *Data Entry* to *Preprocessing*, *Prediction*, and *Data Upload*.
 
+![pubsub](images/pubsub.png)
+
 -   **Vertex AI:** deployed the predictive model to Vertex AI, making it available through a publicly accessible endpoint for inference.
 
 ![vertexai](images/vertexai.png)
 
 -   **BigQuery:** set up buckets to stream Orderly Kline data into, ensuring the data is properly formatted and ready for querying before prediction.
 
-![big_query](images/big_query.png)
+![big_query](images/bigquery.png)
 
 -   **Cloud Functions:** connected the streaming data from the locally running agent to the cloud preprocessing service for real-time data handling.
 

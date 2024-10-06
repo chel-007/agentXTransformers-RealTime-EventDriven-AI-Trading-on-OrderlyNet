@@ -103,19 +103,20 @@ The extra benefits of this event driven implementation with GCP is that everythi
 <table>
   <tr>
     <td>
-      ![drawdown_sharpe](images/drawdown_sharpe.png)  
-      <h4>example risk management - sharpe calc over 10 trades etc.</h4>
+      <img src="images/drawdown_sharpe.png" alt="drawdown_sharpe" width="300"/>  
+      <h4>Example Risk Management - Sharpe Calc Over 10 Trades etc.</h4>
     </td>
     <td>
-      ![volatility](images/volatility.png)  
-      <h4>market volatility triggers - the yellow highlight shows the movement</h4>
+      <img src="images/volatility.png" alt="volatility" width="300"/>  
+      <h4>Market Volatility Triggers - The Yellow Highlight Shows the Movement</h4>
     </td>
     <td>
-      ![orderly_backtest](images/orderly_backtest.png)  
-      <h4>final backtest orderly w/ model</h4>
+      <img src="images/orderly_backtest.png" alt="orderly_backtest" width="300"/>  
+      <h4>Final Backtest Orderly w/ Model</h4>
     </td>
   </tr>
 </table>
+
 
 
 

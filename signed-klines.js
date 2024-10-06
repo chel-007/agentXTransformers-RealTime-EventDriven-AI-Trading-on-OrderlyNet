@@ -103,34 +103,3 @@ async function main() {
 }
 
 main().catch(console.error);
-
-
-
-// orderlyKey testnet = 'ed25519:3ufN5cNa858xbEb18DZg9yTCKGTZAERqsNFM4RjdrYH5';
-
-// orderlyKey mainnet ed25519:7v7tkEsnt4pSdXUXd8ywiTDvtBW5sb16q3PvG9kWgGuk
-
-// private key: 1b2e21b22bc86e27c299f29e03e1f9d65d10ffb1bc302f40062f9d37eb03a527
-
-// private key mainnet: c6fd6dda24060f5269b73459da5fa0978412458bc8f09d7ef5db5d0d3a7aa1f4
-
-// acctId: 0x80ce6ff3f35f000a763198c4da27c79930f4a383f658ae86d6f740b73ee80ef3
-
-// mainnet acctId: 0x4a7e6695042f392f4b4dabdab0af1ba0779386ea908fa2422ca3f51d34df6ca3
-
-
-
-// Binance api Key: iF4KEm7iocx2aky9fUtdq55edpG1rfPnbXoWy2RhLrN4iqTULpboR29gse4qCQfV
-
-
-// Binance api Secret: EdKsl70xTHIpHfZECkWEo2gbieATGdaj7KeFKjHpqRDIuyPlzub4BDMU3S6Sof09
-
-
-// empyreal acctID for testnet: 0x113012ba089670e09f15d2de23bd3029c97bd37ff5681e89ca5107773aa57dac
-
-
-// Empyreal Wallet Add: 0xEE48C329AAEB8Db0d2b4C577d36F69aAF51AbB69
-// Empyreal Wallet Private Key: 0x30e6cd50e6f7110d63e1fd83a68d0a46a8d11932635fae36642a0c68ef72fe28
-// Empyreal Wallet Account: 0xeffefc0efde28f5230a962c97a9e6badbae46c407c75aa4749063c5bebbe909b
-// Empyreal Orderly Key: ed25519:FQjHTZaNX3iNGPnPAAYTG1SzRX3CZRtoLCDfMxvEUMMV
-//

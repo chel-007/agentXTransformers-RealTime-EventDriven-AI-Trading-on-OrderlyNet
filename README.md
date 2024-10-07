@@ -136,27 +136,27 @@ The extra benefits of this event driven implementation with GCP is that everythi
 
 4. Launch Jupyter and navigate to the project directory. Open the notebook `Empyreal SDK in Action - AIEventDrivenStrategy.ipynb`.
 
-4. Install the required dependencies by running the Pip cell once OR `pip install -r requirements.txt`
+5. Install the required dependencies by running the Pip cell once OR `pip install -r requirements.txt`
 
 
 <!-- ("if u face an antivirus error, consider deactivating your antivirus") -->
 
-4. the notebook is divided into 3 parts:
+6. the notebook is divided into 3 parts:
     * `Global Initialization - set up global functions and your Orderly account details`.
     * `AIEventDrivenStrategy - run the strategy logic`.
     * `Agent Controls - access, start, and stop the trading agent`.
 
-5. **Orderly Acct Setup:** follow the instructions in the notebook to obtain your **Orderly Acct key** and **Orderly Network Account ID**
+7. **Orderly Acct Setup:** follow the instructions in the notebook to obtain your **Orderly Acct key** and **Orderly Network Account ID**
 
-6. **Uncomment the service key json `keypath`**
+8. **Uncomment the service key json `keypath`**
 
-7. Trading access mechanism: 
+9. Trading access mechanism: 
     * only one client can run the strategy at a time.
     * running the cells creates a  **lock** on the strategy, to prevent multiple clients
     * the lock is stored in **GCP cloud bucket**
     * ensure to **release the lock** by running the `release_lock()` function when ure donw.
 
-8. if you do not run the cells in sync, it is recommended to **restart the kernel** to ensure proper functioning. running the cells in sequence is highly recommended.
+10. if you do not run the cells in sync, it is recommended to **restart the kernel** to ensure proper functioning. running the cells in sequence is highly recommended.
 
 
 

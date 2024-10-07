@@ -131,10 +131,13 @@ The extra benefits of this event driven implementation with GCP is that everythi
 2. the strategy is best executed in a **jupyter anaconda notebook** due to the nature of the code, it is not recommended to run it in a standalone python script.
 
 3. download **Anacoconda** and run the followquing commands in the Anaconda Prompt:
-    * `conda create --name agentXTransformers python=3.12.4`
-    * `conda activate agentXTransformers`
+    * `conda create --name agentxtransformers python=3.12.4`
+    * `conda activate agentxTransformers`
 
-4. Install the required dependencies by running `pip install -r requirements.txt`. after this, launch Jupyter in anaconda Navigator, Load the notebook `Empyreal SDK in Action - AIEventDrivenStrategy`, activate your venv created earlier.
+4. Launch Jupyter and navigate to the project directory. Open the notebook `Empyreal SDK in Action - AIEventDrivenStrategy.ipynb`.
+
+4. Install the required dependencies by running the Pip cell once OR `pip install -r requirements.txt`
+
 
 <!-- ("if u face an antivirus error, consider deactivating your antivirus") -->
 

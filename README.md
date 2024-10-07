@@ -134,7 +134,9 @@ The extra benefits of this event driven implementation with GCP is that everythi
     * `conda create --name agentXTransformers python=3.12.4`
     * `conda activate agentXTransformers`
 
-4. Install the required dependencies by running `pip install -r requirements.txt`. after this, you can run jupyter with `jupyter notebook`. ("if u face an antivirus error, consider deactivating your antivirus")
+4. Install the required dependencies by running `pip install -r requirements.txt`. after this, launch Jupyter in anaconda Navigator, Load the notebook `Empyreal SDK in Action - AIEventDrivenStrategy`, activate your venv created earlier.
+
+<!-- ("if u face an antivirus error, consider deactivating your antivirus") -->
 
 4. the notebook is divided into 3 parts:
     * `Global Initialization - set up global functions and your Orderly account details`.

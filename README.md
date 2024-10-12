@@ -1,4 +1,4 @@
-## agentXTransformers - [Orderly Network X GCP X Empyreal SDK Implementation]
+## agentxtransformers - [Orderly Network x GCP x Empyreal SDK implementation]
 
 **agentXtransformers** is an advanced machine learning-powered trading agent designed for margin trading on Orderly Network's decentralized order book. The implementation is *real-time*, *flexible*, and ***dynamic***, requiring only the creation of an Orderly account through its user-friendly interface.
 
@@ -147,7 +147,7 @@ The extra benefits of this event driven implementation with GCP is that everythi
 
 5. Install the required dependencies by Uncommenting the first Cell & Running it.
 
-# ("if u face an antivirus error, consider deactivating your antivirus")
+##### ("if u face an antivirus error, consider deactivating your antivirus")
 
 6. the notebook is divided into 3 parts:
     * `Global Initialization - set up global functions and your Orderly account details`.
@@ -156,13 +156,15 @@ The extra benefits of this event driven implementation with GCP is that everythi
 
 7. **Orderly Acct Setup:** follow the instructions in the notebook to obtain your **Orderly Acct key** and **Orderly Network Account ID**
 
-8. **Uncomment the service key json `keypath`**
+8. **Uncomment the service key json `keypath`** before running the cell.
 
 9. Trading access mechanism: 
     * only one client can run the strategy at a time.
     * running the cells creates a  **lock** on the strategy, to prevent multiple clients
     * the lock is stored in **GCP cloud bucket**
     * ensure to **release the lock** by running the `release_lock()` function when ure donw.
+
+- * in the Agent Controls, you can tweak the parameters of the strategy, such as the **risk level**, **max drawdown**. increase acct collateral by running the faucet again.
 
 10. if you do not run the cells in sync, it is recommended to **restart the kernel** to ensure proper functioning. running the cells in sequence is highly recommended.
 

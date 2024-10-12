@@ -85,7 +85,9 @@ The extra benefits of this event driven implementation with GCP is that everythi
 
 * **Dynamic Positons:** the scoring from MSA is used to create ***dynamic positon size*** (purchase amt) and *stop loss, take profit* prices for risk management.
 
-* **Limit Market Orders** of Stop Loss (SL) & Take Profit (TP) using Empyreal SDKs and  ***Orderly Network's REST API***.
+* **Take Profit (TP) Limit Orders** placed using Empyreal SDKs and ***Orderly Network's REST API***, while intentionally skipping Stop Loss (SL) to minimize trading fees.
+
+> ***typically, traders use both SL and TP, but with an agent that constantly monitors the market, we can reduce fees and avoid closing trades during temporary price dips***.
 
 * **Monitor Trades**, the agent further *monitor open orders* and closes them when the market moves against by a percentage. This works for both **BUY** and **SELL** limits.
 
@@ -94,6 +96,11 @@ The extra benefits of this event driven implementation with GCP is that everythi
 * **Tracking Volatility**: (*eth can be highly volatile sometimes*), the **agent + model combo** struggles to make successful trade, so it can ***detect this and halt trading*** (only) for the time volatility lasts.
 
 * the agent places trades from the ***joint decision weighting*** of model's prediction and market sentiment. this is compared against a *threshold* that if met, orders are placed.
+
+* a fallback mechanism is also implemented, for situations when there is an overlap between the model's prediction and market sentiment.
+
+![fallback](images/fallback.png)
+
 
 
 **Link to the Agent Strategy: [agent-xtransformer Jupyter Notebook](https://github.com/chel-007/agentXTransformers-RealTime-EventDriven-AI-Trading-on-OrderlyNet/blob/master/Empyreal%20SDK%20in%20Action%20-%20AIEventDrivenStrategy.ipynb)**
@@ -109,6 +116,10 @@ The extra benefits of this event driven implementation with GCP is that everythi
     <td>
       <img src="images/volatility.png" alt="volatility" width="300"/>  
       <h4>Market Volatility Triggers - The Yellow Highlight Shows the Movement</h4>
+    </td>
+    <td>
+      <img src="images/pnl_20.png" alt="volatility" width="300"/>  
+      <h4>Overview of the Pnl Calculation - Plots after every 10 Trades</h4>
     </td>
     <td>
       <img src="images/orderly_backtest.png" alt="orderly_backtest" width="300"/>  
@@ -130,16 +141,13 @@ The extra benefits of this event driven implementation with GCP is that everythi
 
 2. the strategy is best executed in a **jupyter anaconda notebook** due to the nature of the code, it is not recommended to run it in a standalone python script.
 
-3. download **Anacoconda** and run the followquing commands in the Anaconda Prompt:
-    * `conda create --name agentxtransformers python=3.12.4`
-    * `conda activate agentxTransformers`
+3. download **Anacoconda**.
 
 4. Launch Jupyter and navigate to the project directory. Open the notebook `Empyreal SDK in Action - AIEventDrivenStrategy.ipynb`.
 
-5. Install the required dependencies by running the Pip cell once OR `pip install -r requirements.txt`
+5. Install the required dependencies by Uncommenting the first Cell & Running it.
 
-
-<!-- ("if u face an antivirus error, consider deactivating your antivirus") -->
+# ("if u face an antivirus error, consider deactivating your antivirus")
 
 6. the notebook is divided into 3 parts:
     * `Global Initialization - set up global functions and your Orderly account details`.
@@ -158,10 +166,9 @@ The extra benefits of this event driven implementation with GCP is that everythi
 
 10. if you do not run the cells in sync, it is recommended to **restart the kernel** to ensure proper functioning. running the cells in sequence is highly recommended.
 
+11. the strategy requires a stable internet connection to function properly. 🕹
+
 
 
 
 > Courtesy of the bounty Sponsored BY: [**Orderly Network** X **GCP** x **StackUP**](https://earn.stackup.dev/campaigns/unleashing-the-power-of-ai-trading-agents/quests/orderly-network-x-google-cloud-bounty-unleashing-the-power-of-ai-trading-agents-43d3)
-> 
-> 
-> Written with [StackEdit](https://stackedit.io/).

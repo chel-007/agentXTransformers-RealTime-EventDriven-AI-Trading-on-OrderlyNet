@@ -117,9 +117,18 @@ The extra benefits of this event driven implementation with GCP is that everythi
       <img src="images/volatility.png" alt="volatility" width="300"/>  
       <h4>Market Volatility Triggers - The Yellow Highlight Shows the Movement</h4>
     </td>
+    </tr>
+    </table>
+
+<table>
+  <tr>
     <td>
       <img src="images/pnl_20.png" alt="volatility" width="300"/>  
       <h4>Overview of the Pnl Calculation - Plots after every 10 Trades</h4>
+    </td>
+    <td>
+      <img src="images/sniped.png" alt="volatility" width="300"/>  
+      <h4>The Agent Monitoring Open Position (and Closing after Profit) during Hold event</h4>
     </td>
     <td>
       <img src="images/orderly_backtest.png" alt="orderly_backtest" width="300"/>  

@@ -51,7 +51,7 @@
 
 ![vertexai](images/vertexai.png)
 
--   **BigQuery:** set up buckets to stream Orderly Kline data into, ensuring the data is properly formatted and ready for querying before prediction.
+-   **BigQuery:** set up tables to stream Orderly Kline data into, ensuring the data is properly formatted and ready for querying before prediction.
 
 ![big_query](images/bigquery.png)
 
@@ -173,7 +173,7 @@ The extra benefits of this event driven implementation with GCP is that everythi
     * the lock is stored in **GCP cloud bucket**
     * ensure to **release the lock** by running the `release_lock()` function when ure donw.
 
-- * in the Agent Controls, you can tweak the parameters of the strategy, such as the **risk level**, **max drawdown**. increase acct collateral by running the faucet again.
+- * in the Agent Controls, you can tweak the parameters of the strategy, such as the **risk level**, **broker**, **max drawdown**. to increase collateral on an Acct from `1000`,  you need to run the **Faucet & Deposit** twice (max 5 times) on a fresh acct.
 
 10. if you do not run the cells in sync, it is recommended to **restart the kernel** to ensure proper functioning. running the cells in sequence is highly recommended.
 

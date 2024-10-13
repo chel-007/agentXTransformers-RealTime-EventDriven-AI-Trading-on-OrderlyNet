@@ -179,6 +179,7 @@ The extra benefits of this event driven implementation with GCP is that everythi
 
 11. the strategy requires a stable internet connection to function properly. 🕹
 
+> updated vertex ai model endpoint: `endpoints/7225481343860211712`
 
 > NB: global variables of the strategy(eg, self.abc, self.xyz) are reset whenever the `agent controls` cell is run. 
 

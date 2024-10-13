@@ -150,11 +150,11 @@ The extra benefits of this event driven implementation with GCP is that everythi
 
 2. the strategy is best executed in a **jupyter anaconda notebook** due to the nature of the code, it is not recommended to run it in a standalone python script.
 
-3. download **Anacoconda**.
+3. download **Anaconda**.
 
 4. Launch Jupyter and navigate to the project directory. Open the notebook `Empyreal SDK in Action - AIEventDrivenStrategy.ipynb`.
 
-5. Install the required dependencies by Uncommenting the first Cell & Running it.
+5. Install the required dependencies by uncommenting the first Cell & Running it.
 
 ##### ("if u face an antivirus error, consider deactivating your antivirus")
 
@@ -178,6 +178,9 @@ The extra benefits of this event driven implementation with GCP is that everythi
 10. if you do not run the cells in sync, it is recommended to **restart the kernel** to ensure proper functioning. running the cells in sequence is highly recommended.
 
 11. the strategy requires a stable internet connection to function properly. 🕹
+
+
+> NB: global variables of the strategy(eg, self.abc, self.xyz) are reset whenever the `agent controls` cell is run. 
 
 
 

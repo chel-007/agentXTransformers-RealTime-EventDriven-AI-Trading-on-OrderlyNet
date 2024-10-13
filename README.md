@@ -183,6 +183,9 @@ The extra benefits of this event driven implementation with GCP is that everythi
 > NB: global variables of the strategy(eg, self.abc, self.xyz) are reset whenever the `agent controls` cell is run. 
 
 
+### Strategy Overview Video - Visual Guide
+
+[![strategy video](images/thumbnail.png)](https://vimeo.com/1019132096?share=copy)
 
 
 > Courtesy of the bounty Sponsored BY: [**Orderly Network** X **GCP** x **StackUP**](https://earn.stackup.dev/campaigns/unleashing-the-power-of-ai-trading-agents/quests/orderly-network-x-google-cloud-bounty-unleashing-the-power-of-ai-trading-agents-43d3)
